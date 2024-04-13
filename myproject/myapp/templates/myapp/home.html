@@ -1,0 +1,46 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h1>Добро пожаловать на главную страницу</h1>
+<p>Выберите одну из опций ниже:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Клиенты</h5>
+                <p class="card-text">Управление клиентами.</p>
+                <a href="{% url 'list_clients' %}" class="btn btn-primary">Перейти к клиентам</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Товары</h5>
+                <p class="card-text">Управление товарами.</p>
+                <a href="{% url 'list_products' %}" class="btn btn-primary">Перейти к товарам</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Заказы</h5>
+                <p class="card-text">Управление заказами.</p>
+                <a href="{% url 'list_orders' %}" class="btn btn-primary">Перейти к заказам</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Заказы клиентов</h5>
+                <p class="card-text">Просмотр заказанных клиентом товаров из всех его заказов.</p>
+                <a href="{% url 'client_orders' %}" class="btn btn-primary">Перейти к заказам клиентов</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
